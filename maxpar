@@ -1,0 +1,38 @@
+package com.d;
+
+public class maxpark {
+		public static void main(String args[]) {
+			
+			int arr[][]= {
+					{0,1,0},
+					{1,0,1},
+					{0,0,1},
+					{1,1,0}
+			};
+			
+			int newa[]=new int[arr.length];
+			
+			for(int i=0;i<arr.length;i++) {
+				int sum=0; 
+
+				for(int j=0;j<arr[i].length;j++) {
+					sum+=arr[i][j];
+				}
+				newa[i]=sum;
+				System.out.println();
+			}
+			int max=0;
+
+			for(int i=0;i<newa.length;i++) {
+				if(newa[i]>max) {
+					max=i;
+				}
+			}
+			
+			for(int i=0;i<newa.length;i++) {
+				if(newa[i]==newa[max]) {
+					System.out.print(i+" ");
+				}
+			}
+	}
+}
