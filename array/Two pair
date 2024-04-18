@@ -1,0 +1,24 @@
+package tcs;
+
+public class two_pair {
+	public static void main(String args[]) {
+		
+		int arr[]= {4,5,3,1,6,8};
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+				
+				int res=0;
+				res=arr[i]+arr[j];
+				
+				if(arr[i]==arr[j]) {
+					continue;
+				}
+				else if(res%2==0) {
+					
+					System.out.println(arr[i]+"->"+arr[j]);
+				}
+			}
+		}
+	}
+}
