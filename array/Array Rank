@@ -1,0 +1,48 @@
+package com.nqt.array;
+
+public class arrayRank {
+	public static void main(String args[]) {
+		
+		int arr[]= {25,56,56,56,85,85,45};
+		int brr[]=new int[arr.length];
+		int newarr[]= new int[arr.length];
+		int newbrr[]=new int[brr.length];
+		int count=1;
+		
+		for(int i=0;i<arr.length;i++) {
+			brr[i]=arr[i];
+		}
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				
+				if(arr[i]>arr[j]) {					
+					int temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+					
+				}
+			}
+			
+				
+			if(i>0 && arr[i-1]==arr[i]) {
+				newarr[i]=newarr[i-1];
+			}else {
+				newarr[i]=count++;
+			}
+		}
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<brr.length;j++) {
+				
+				if(arr[i]==brr[j]) {
+					newbrr[j]=newarr[i];
+				}
+			}
+		}
+		
+		for(int i=0;i<newbrr.length;i++) {
+			System.out.println(newbrr[i]);
+		}
+	}
+
+}
