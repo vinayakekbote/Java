@@ -1,0 +1,17 @@
+package com.number;
+
+public class findCube {
+	public static void main(String args[]) {
+		int start=;
+		int  end=5;
+		int sum=0;
+		
+		for(int i=start;i<=end;i++) {
+			int cube;
+			cube=i*i*i;
+			
+			sum=cube+sum;
+		}
+		System.out.println(sum);
+	}
+}
