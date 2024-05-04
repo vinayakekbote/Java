@@ -1,0 +1,23 @@
+package com.number;
+
+public class armstrong {
+	public static void main(String[] args) {
+		
+		int sum=0;
+
+		int a=37;
+		int on=a;
+		while(a>0) {
+			int rem=a%10;
+			int cube=rem*rem*rem;
+			sum=cube+sum;
+			System.out.println("Sum is : "+sum);
+			a=a/10;
+		}
+		if(on==sum) {
+			System.out.println("Armstrong number");
+		}else {
+			System.out.println("Not Armstrong : "+sum);
+		}
+	}
+}
