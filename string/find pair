@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    
+
+		System.out.println("Enter the String value : ");
+		int l=sc.nextInt();
+		sc.nextLine();
+		String[] a=new String[l];
+		
+		for(int i=0;i<a.length;i++){
+		    a[i]=sc.nextLine();
+		}
+		
+		int cl=0;
+		int cr=0;
+		
+		for(int i=0;i<a.length;i++){
+		    if(String.valueOf(a[i].charAt(1)).equals("R")){
+		        cr++;
+		    }else{
+		        cl++;
+		    }
+		}
+		
+		if(cl>cr){
+		    System.out.println(cr);
+		}else{
+		    System.out.println(cl);
+		}
+
+	}
+}
